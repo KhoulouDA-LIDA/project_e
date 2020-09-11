@@ -1,0 +1,56 @@
+//the procedure
+PROCEDURE dot_product(size: INTEGER, T1:ARRAY_OF INTEGER, T2:ARRAY_OF INTEGER)
+VAR
+   i:INTEGER;
+   ps:INTEGER:=0;
+BEGIN
+   FOR i FROM 0 to n DO
+       ps:= ps + T1[i]*T2[i]
+   END_FOR
+END
+// l'algorithme
+ALGORITHM vectors_orthogal
+VAR 
+   V1: ARRAY_OF INTEGER[50];
+   V2: ARRAY_OF INTEGER[50];
+   n: INTEGER;
+BEGIN 
+     dot_product(n, V1, V2);
+     WRITE(ps);
+
+     IF (ps == 0) THEN
+        READ(" THE VECTORS ARE ORTHOGONAL");
+     ELSE 
+        READ(" THE VECTORS AREN'T ORTHOGONAL");
+    END_IF 
+END 
+// the function
+FUNCTION dot__product( n:INTEGER, T1:ARRAY_OF INTEGER, T2:ARRAY_OF INTEGER):INTEGER
+VAR 
+   i:INTEGER;
+   ps: INTEGER:=0;
+BEGIN
+     FOR i FROM 0 to n DO
+         ps:= ps+T1[i]*T2[i] 
+     END_FOR
+  RETURN ps;
+END
+// new algorithm with function 
+ALGORITHM orthogonal_vectors
+VAR 
+
+   V1:ARRAY_OF INTEGER[20];
+   V2:ARRAY_OF INTEGER[20];
+   size: INTEGER;
+BEGIN
+     IF (dot__product(size, V1, V2)==0) THEN 
+       READ("the vectors are orthogonal");
+     ELSE
+       READ("the vectors aren't orthogonal");
+    END_IF
+END         
+
+           
+
+
+          
