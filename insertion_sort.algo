@@ -1,0 +1,28 @@
+ALGORITHM insertion_sort
+VAR 
+   tab:ARRAY_OF INTEGER;
+   i:INTEGER;
+   k:INTEGER;
+   min:INTEGER;
+   max:INTEGER;
+BEGIN 
+FOR i FROM 1 TO tab.length DO
+   k:= i-1
+     REPEAT
+           IF (tab[i]<tab[k]) THEN 
+               min:=tab[i]
+               max:=tab[k]
+               tab[k]:=min
+               tab[i]:=max
+               i:=i-1
+               k:=k-1
+            ELSE
+                k:=-1
+            END_IF
+     UNTIL(k<0) 
+END_FOR     
+END               
+
+    
+
+
