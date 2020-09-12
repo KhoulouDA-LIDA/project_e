@@ -1,0 +1,21 @@
+ALGORITHM palind_rome
+VAR 
+   i:INTEGER:=0;
+PROCEDURE palindrome(VAR i:INTEGER, str:STRING)
+    CONST
+       n:= (str.length -1)/2;
+    VAR
+
+    BEGIN
+        DO
+            IF (str.length<=1) THEN
+                BREAK;
+            ELSE_IF (str[i]=str[n-i]) THEN
+                 i:=i+1
+                 palindrome(i, str);
+            ELSE
+                break;
+            END_IF    
+         WHILE(i<n-1) 
+        END_WHILE 
+    END               
